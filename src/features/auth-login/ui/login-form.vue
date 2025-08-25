@@ -16,7 +16,8 @@ async function onSubmit() {
     const redirect = new URLSearchParams(window.location.search).get('redirect') || '/';
     router.push(redirect); // Usa `router.push` en lugar de `window.location.assign`
   } catch (e) {
-    // El error ya se maneja en `useLogin` y se muestra en el template
+    // Manejo de errores si es necesario
+    console.error('Error during login:', e);
   }
 }
 </script>
